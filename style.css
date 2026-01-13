@@ -174,3 +174,45 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== HORIZONTAL SCROLL (MOBILE) ===== */
+@media (max-width: 900px) {
+
+  /* SERVICES swipe */
+  .service-cards {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+  }
+
+  .service-cards::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card {
+    min-width: 260px;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
+
+  /* IDOLS swipe */
+  .idol-cards {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+  }
+
+  .idol-cards::-webkit-scrollbar {
+    display: none;
+  }
+
+  .idol-card {
+    min-width: 260px;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
+}
