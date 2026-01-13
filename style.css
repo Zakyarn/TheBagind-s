@@ -11,6 +11,7 @@ body {
   background-color: #0B0F1A;
   color: #FFFFFF;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* NAVBAR */
@@ -18,26 +19,24 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 80px;
+  padding: 20px 60px;
   background-color: #111827;
 }
 
 .logo {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  font-size: 20px;
 }
 
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 30px;
+  gap: 24px;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #9CA3AF;
-  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
@@ -47,58 +46,44 @@ body {
 /* HERO */
 .hero {
   text-align: center;
-  padding: 140px 20px;
+  padding: 120px 20px;
 }
 
 .hero h1 {
   font-family: 'Poppins', sans-serif;
-  font-size: 44px;
-  margin-bottom: 20px;
+  font-size: 42px;
+  margin-bottom: 16px;
 }
 
 .hero p {
   color: #9CA3AF;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .hero button {
   padding: 12px 32px;
   background-color: #2563EB;
   border: none;
-  color: #FFFFFF;
+  color: white;
   border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s ease;
 }
 
-.hero button:hover {
-  background-color: #1E40AF;
-}
-
-/* ABOUT */
-.about {
-  padding: 80px;
+/* SECTION GLOBAL */
+.about,
+.services,
+.idols,
+.contact {
+  padding: 80px 20px;
   text-align: center;
-}
-
-.about h2 {
-  font-family: 'Poppins', sans-serif;
-  margin-bottom: 20px;
 }
 
 /* SERVICES */
 .services {
-  padding: 80px;
   background-color: #111827;
 }
 
-.services h2 {
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  margin-bottom: 40px;
-}
-
 .service-cards {
+  margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
@@ -106,39 +91,12 @@ body {
 
 .card {
   background-color: #0B0F1A;
-  border: 1px solid #1F2933;
   padding: 30px;
-  border-radius: 10px;
-  text-align: center;
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.card h3 {
-  font-family: 'Poppins', sans-serif;
-  margin-bottom: 10px;
-}
-
-.card p {
-  color: #9CA3AF;
-  font-size: 14px;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  border-color: #2563EB;
+  border-radius: 12px;
+  border: 1px solid #1F2933;
 }
 
 /* IDOLS */
-.idols {
-  padding: 80px;
-  text-align: center;
-}
-
-.idols h2 {
-  font-family: 'Poppins', sans-serif;
-  margin-bottom: 10px;
-}
-
 .idols .subtitle {
   color: #9CA3AF;
   margin-bottom: 40px;
@@ -154,7 +112,6 @@ body {
   background-color: #111827;
   border-radius: 14px;
   overflow: hidden;
-  transition: transform 0.3s ease;
 }
 
 .idol-card img {
@@ -165,56 +122,23 @@ body {
 
 .idol-card h3 {
   font-family: 'Poppins', sans-serif;
-  margin-top: 15px;
+  margin-top: 16px;
 }
 
 .idol-card span {
-  display: block;
   color: #2563EB;
   font-size: 14px;
-  margin-bottom: 10px;
 }
 
 .idol-card p {
   color: #9CA3AF;
+  padding: 0 20px 24px;
   font-size: 14px;
-  padding: 0 20px 25px;
-}
-
-.idol-card:hover {
-  transform: translateY(-8px);
-}
-
-/* PORTFOLIO */
-.portfolio {
-  padding: 80px;
-  text-align: center;
-}
-
-.portfolio h2 {
-  font-family: 'Poppins', sans-serif;
-  margin-bottom: 10px;
-}
-
-.portfolio p {
-  color: #9CA3AF;
 }
 
 /* CONTACT */
 .contact {
-  padding: 80px;
   background-color: #111827;
-  text-align: center;
-}
-
-.contact h2 {
-  font-family: 'Poppins', sans-serif;
-  margin-bottom: 10px;
-}
-
-.contact p {
-  color: #9CA3AF;
-  margin-bottom: 20px;
 }
 
 .contact button {
@@ -222,13 +146,7 @@ body {
   background-color: #2563EB;
   border: none;
   border-radius: 6px;
-  color: #FFFFFF;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.contact button:hover {
-  background-color: #1E40AF;
+  color: white;
 }
 
 /* FOOTER */
@@ -239,18 +157,20 @@ footer {
   border-top: 1px solid #1F2933;
 }
 
+/* RESPONSIVE */
 @media (max-width: 900px) {
-  .service-cards,
-  .idol-cards {
-    grid-template-columns: 1fr;
-  }
-
   .navbar {
     flex-direction: column;
-    gap: 15px;
+    gap: 16px;
+    padding: 20px;
   }
 
   .hero h1 {
-    font-size: 32px;
+    font-size: 28px;
+  }
+
+  .service-cards,
+  .idol-cards {
+    grid-template-columns: 1fr;
   }
 }
