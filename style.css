@@ -157,8 +157,9 @@ footer {
   border-top: 1px solid #1F2933;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE + HORIZONTAL SWIPE (FINAL) */
 @media (max-width: 900px) {
+
   .navbar {
     flex-direction: column;
     gap: 16px;
@@ -169,22 +170,14 @@ footer {
     font-size: 28px;
   }
 
-  .service-cards,
-  .idol-cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ===== HORIZONTAL SCROLL (MOBILE) ===== */
-@media (max-width: 900px) {
-
-  /* SERVICES swipe */
+  /* SERVICES SWIPE */
   .service-cards {
     display: flex;
+    flex-direction: row;
     overflow-x: auto;
     gap: 16px;
     scroll-snap-type: x mandatory;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
   }
 
   .service-cards::-webkit-scrollbar {
@@ -193,17 +186,18 @@ footer {
 
   .card {
     min-width: 260px;
-    scroll-snap-align: start;
     flex-shrink: 0;
+    scroll-snap-align: start;
   }
 
-  /* IDOLS swipe */
+  /* IDOLS SWIPE */
   .idol-cards {
     display: flex;
+    flex-direction: row;
     overflow-x: auto;
     gap: 16px;
     scroll-snap-type: x mandatory;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
   }
 
   .idol-cards::-webkit-scrollbar {
@@ -212,7 +206,7 @@ footer {
 
   .idol-card {
     min-width: 260px;
-    scroll-snap-align: start;
     flex-shrink: 0;
+    scroll-snap-align: start;
   }
 }
