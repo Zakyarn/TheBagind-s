@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Aurora",
+    "role": "Lead Vocalist",
+    "image": "images/idol1.jpg",
+    "description": "Digital branding and visual identity for idol promotions."
+  },
+  {
+    "name": "Lynx",
+    "role": "Main Dancer",
+    "image": "images/idol2.jpg",
+    "description": "Social media visuals and campaign design."
+  },
+  {
+    "name": "Noir",
+    "role": "Rapper",
+    "image": "images/idol3.jpg",
+    "description": "Personal website and digital portfolio."
+  }
+]
