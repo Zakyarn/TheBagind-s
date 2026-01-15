@@ -70,7 +70,8 @@
     <h2>Featured Talents</h2>
     <p class="subtitle">Talents we support digitally</p>
 
-    <div class="idol-cards">
+    <!-- 👇 ID DITAMBAHKAN (TIDAK MENGUBAH ISI) -->
+    <div class="idol-cards" id="idolContainer">
       <div class="idol-card">
         <img src="images/idol1.jpg" alt="Aurora">
         <h3>Aurora</h3>
@@ -93,7 +94,7 @@
       </div>
     </div>
   </section>
-
+  
   <!-- CONTACT -->
   <section class="contact" id="contact">
     <h2>Contact Us</h2>
@@ -105,6 +106,39 @@
   <footer>
     <p>© 2026 The Bagind’s Agency. All rights reserved.</p>
   </footer>
+
+  <!-- ============================= -->
+  <!-- OPTIONAL: DATA-DRIVEN IDOLS -->
+  <!-- ============================= -->
+  <script>
+    /*
+      Kalau suatu hari mau ganti isi idol TANPA edit HTML:
+      tinggal edit file: data/idols.json
+    */
+
+    fetch('data/idols.json')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('idolContainer');
+        if (!container) return;
+
+        container.innerHTML = '';
+
+        data.forEach(idol => {
+          container.innerHTML += `
+            <div class="idol-card">
+              <img src="${idol.image}" alt="${idol.name}">
+              <h3>${idol.name}</h3>
+              <span>${idol.role}</span>
+              <p>${idol.description}</p>
+            </div>
+          `;
+        });
+      })
+      .catch(() => {
+        // kalau file json belum ada, website TETAP aman
+      });
+  </script>
 
 </body>
 </html>
